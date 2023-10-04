@@ -52,3 +52,33 @@ def getStudentName():
         'student_name' : studentName
     }
 
+
+rfidAccessControl = {
+    "0000000000" : { "name": "Rafaela Oliveira", "access" : True },
+    "1111111111" : { "name": "Tiago Santos", "access" : True },
+    "2222222222" : { "name": "Carolina Silva", "access" : True },
+    "3333333333" : { "name": "João Pereira", "access" : True },
+    "4444444444" : { "name": "Mariana Costa", "access" : True },
+    "5555555555" : { "name": "Pedro Rodrigues", "access" : False },
+    "6666666666" : { "name": "Ana Martins", "access" : False },
+    "7777777777" : { "name": "Lucas Ferreira", "access" : False },
+    "8888888888" : { "name": "Beatriz Gomes", "access" : False },
+    "9999999999" : { "name": "Gabriel Sousa", "access" : False },
+}
+
+@app.get("/access/{id}")
+def getAccessData(id : str):
+    if id not in rfidAccessControl:
+        return {
+            "status" : False,
+        }
+    
+    accessData = rfidAccessControl.get(id)
+    return {
+        "status" : True,
+        "data" : {
+            "id" : id,
+            "name" : accessData["name"],
+            "access" : accessData["access"]
+        }
+    }
