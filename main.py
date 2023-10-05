@@ -1,4 +1,6 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
+
+from starlette.status import *
 
 import random
 from datetime import datetime
@@ -67,15 +69,17 @@ rfidAccessControl = {
 }
 
 @app.get("/access/{id}")
-def getAccessData(id : str):
+def getAccessData(id : str, response: Response):
     if id not in rfidAccessControl:
+        response.status_code = HTTP_404_NOT_FOUND
         return {
-            "status" : False,
+            "details" : "ID not found",
         }
     
     accessData = rfidAccessControl.get(id)
+    response.status_code = HTTP_200_OK
     return {
-        "status" : True,
+        "details" : "Success",
         "data" : {
             "id" : id,
             "name" : accessData["name"],
