@@ -110,10 +110,8 @@ def getAccessData(id : str, response: Response):
     accessData = rfidAccessControl.get(id)
     response.status_code = HTTP_200_OK
     return {
-        "details" : "Success",
-        "data" : {
-            "id" : id,
-            "name" : accessData["name"],
-            "access" : accessData["access"]
-        }
+        "id" : id,
+        "name" : accessData["name"],
+        "access" : accessData["access"]
+        
     }
