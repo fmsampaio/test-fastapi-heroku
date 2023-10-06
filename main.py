@@ -10,7 +10,7 @@ app = FastAPI()
 @app.get("/")
 def index():
     return {
-        "data" : "Simple FastAPI app for Heroku deployment (updated)!"
+        "data" : "Simple API for TE-INF 2023!"
     }
 
 students = [
