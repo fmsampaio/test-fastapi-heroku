@@ -54,8 +54,8 @@ def getStudentName():
         'student_name' : studentName
     }
 
-
-rfidAccessControl = {
+"""
+rfidAccessControlTMP = {
     "0000000000" : { "name": "Rafaela Oliveira", "access" : True },
     "1111111111" : { "name": "Tiago Santos", "access" : True },
     "2222222222" : { "name": "Carolina Silva", "access" : True },
@@ -67,6 +67,37 @@ rfidAccessControl = {
     "8888888888" : { "name": "Beatriz Gomes", "access" : False },
     "9999999999" : { "name": "Gabriel Sousa", "access" : False },
 }
+"""
+
+rfidAccessControl = {
+    '7041231266' :      { "name": "Rafaela Oliveira", "access" : True },
+    '271819227210' :    { "name": "Tiago Santos", "access" : True },
+    '912033327170' :    { "name": "Carolina Silva", "access" : True },
+    '3412924211104' :   { "name": "João Pereira", "access" : True },
+    '59819027150' :     { "name": "Mariana Costa", "access" : True },
+    '54160146141137' :  { "name": "Pedro Rodrigues", "access" : True },
+    '17104427156' :     { "name": "Ana Martins", "access" : True },
+    '219229927181' :    { "name": "Lucas Ferreira", "access" : True },
+    '591173227117' :    { "name": "Beatriz Gomes", "access" : True },
+    '13919919327150' :  { "name": "Gabriel Sousa", "access" : True },
+    '25101952735' :     { "name": "Sofia Almeida", "access" : True },
+
+    '5512514363250' :   { "name": "Miguel Ribeiro", "access" : False },
+    '139791323397' :    { "name": "Laura Carvalho", "access" : False },
+    '392504060201' :    { "name": "Matheus Fernandes", "access" : False },
+    '29825521157' :     { "name": "Julia Nunes", "access" : False },
+    '155137993380' :    { "name": "Guilherme Gonçalves", "access" : False },
+    '210133712711' :    { "name": "Isabella Santos", "access" : False },
+    '11912220459250' :  { "name": "Enzo Lima", "access" : False },
+    '985514631216' :    { "name": "Giovanna Pereira", "access" : False },
+    '199214363117' :    { "name": "Leonardo Oliveira", "access" : False },
+    '1082143197124' :   { "name": "Valentina Silva", "access" : False },
+    '1401962197143' :   { "name": "Daniel Rodrigues", "access" : False },
+    '2315210760216' :   { "name": "Larissa Costa", "access" : False },
+    '2475714263127' :   { "name": "Lucas Ferreira", "access" : False },
+    '187793616192' :    { "name": "Clara Gomes", "access" : False },
+}
+
 
 @app.get("/access/{id}")
 def getAccessData(id : str, response: Response):
