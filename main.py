@@ -84,6 +84,7 @@ rfidAccessControl = {
     '591173227117' :    { "name": "Beatriz Gomes", "access" : True },
     '13919919327150' :  { "name": "Gabriel Sousa", "access" : True },
     '25101952735' :     { "name": "Sofia Almeida", "access" : True },
+    'BB4F2410' :        { "name": "Luke Skywalker", "access" : True },
 
     '5512514363250' :   { "name": "Miguel Ribeiro", "access" : False },
     '139791323397' :    { "name": "Laura Carvalho", "access" : False },
@@ -99,6 +100,7 @@ rfidAccessControl = {
     '2315210760216' :   { "name": "Larissa Costa", "access" : False },
     '2475714263127' :   { "name": "Lucas Ferreira", "access" : False },
     '187793616192' :    { "name": "Clara Gomes", "access" : False },
+    '36A0928D'  :       { "name": "Darth Vader", "access" : False },
 }
 
 
